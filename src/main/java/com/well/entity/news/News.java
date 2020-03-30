@@ -1,9 +1,12 @@
-package com.well.entity;
+package com.well.entity.news;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
@@ -16,6 +19,8 @@ import java.io.Serializable;
  * @since 2020-03-26
  */
 @TableName("tb_news")
+@Setter
+@Getter
 public class News extends Model<News> {
 
     private static final long serialVersionUID=1L;
@@ -44,6 +49,11 @@ public class News extends Model<News> {
     private String content;
 
     /**
+     * 图片
+     */
+    private String imgUrl;
+
+    /**
      * 有效状态
      */
     private Integer status;
@@ -58,71 +68,6 @@ public class News extends Model<News> {
      */
     private LocalDateTime mtime;
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Integer getClick() {
-        return click;
-    }
-
-    public void setClick(Integer click) {
-        this.click = click;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public LocalDateTime getCtime() {
-        return ctime;
-    }
-
-    public void setCtime(LocalDateTime ctime) {
-        this.ctime = ctime;
-    }
-
-    public LocalDateTime getMtime() {
-        return mtime;
-    }
-
-    public void setMtime(LocalDateTime mtime) {
-        this.mtime = mtime;
-    }
-
     @Override
     protected Serializable pkVal() {
         return this.id;
@@ -136,6 +81,7 @@ public class News extends Model<News> {
         ", title=" + title +
         ", click=" + click +
         ", content=" + content +
+        ", imgUrl=" + imgUrl +
         ", status=" + status +
         ", ctime=" + ctime +
         ", mtime=" + mtime +

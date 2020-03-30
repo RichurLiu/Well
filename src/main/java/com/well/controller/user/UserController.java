@@ -1,6 +1,7 @@
-package com.well.controller;
+package com.well.controller.user;
 
 
+import com.well.controller.BasicController;
 import com.well.entity.User;
 import com.well.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/well/user/")
-public class UserController extends BasicController{
+public class UserController extends BasicController {
     @Autowired
     private UserService userService;
 

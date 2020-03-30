@@ -1,4 +1,4 @@
-package com.well.entity;
+package com.well.entity.news;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;

@@ -1,8 +1,8 @@
-package com.well.service.impl;
+package com.well.service.impl.news;
 
-import com.well.entity.News;
-import com.well.mapper.NewsMapper;
-import com.well.service.NewsService;
+import com.well.entity.news.News;
+import com.well.mapper.news.NewsMapper;
+import com.well.service.news.NewsService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

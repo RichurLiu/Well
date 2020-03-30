@@ -13,7 +13,7 @@ import lombok.Setter;
 public class NewsDetailVO extends BaseVO {
     private Long id;
     private String title;
-    private String addTime;
+    private Long addTime;
     private Integer click;
     private String content;
     private String imgUrl;

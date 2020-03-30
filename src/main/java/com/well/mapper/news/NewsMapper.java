@@ -1,6 +1,6 @@
-package com.well.mapper;
+package com.well.mapper.news;
 
-import com.well.entity.News;
+import com.well.entity.news.News;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
